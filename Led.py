@@ -1,7 +1,7 @@
-import Sensor
+
 import RPi.GPIO as GPIO
 
-class Led(Sensor):
+class Led():
     def __init__(self, pin):
         super().__init__(pin)
         GPIO.setmode(GPIO.BCM)

@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
-from Ultrasonico import Ultrasonico
+from ultrasonico import Ultrasonico
 from Temperatura import TemperaturaHumedad
-from Led import Led
+from led import Led
 
 class Sistema:
     def __init__(self, led_pins, ultrasonico_pins, temp_hum_pin):
