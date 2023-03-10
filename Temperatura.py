@@ -1,5 +1,5 @@
 import Adafruit_DHT
-import Sensor
+from Sensor import Sensor
 
 class TemperaturaHumedad(Sensor):
     def __init__(self, pin):

@@ -1,4 +1,4 @@
-import Sensor
+from Sensor import Sensor
 import RPi.GPIO as GPIO
 
 class Led(Sensor):

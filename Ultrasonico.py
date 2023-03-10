@@ -1,4 +1,4 @@
-import Sensor
+from Sensor import Sensor
 import RPi.GPIO as GPIO
 import time
 
@@ -24,4 +24,3 @@ class Ultrasonico(Sensor):
         duracion = end-start
         distancia = duracion*17150
         return round(distancia, 2)
-    
