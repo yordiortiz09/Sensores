@@ -39,7 +39,7 @@ class Sistema:
         
     def medir_temperatura_y_humedad(self):
         return self.temp_hum.med
-
+    
 led_pins = [4]
 ultrasonico_pins = [(23, 24), (5, 6), (12, 16)]
 temp_hum_pin = 18
