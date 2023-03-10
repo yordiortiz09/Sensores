@@ -1,8 +1,7 @@
 import RPi.GPIO as GPIO
-import Ultrasonico
+from ultrasonico import Ultrasonico
 from Temperatura import TemperaturaHumedad
-import Temperatura
-import Led
+from led import Led
 
 class Sistema:
     def __init__(self, led_pins, ultrasonico_pins, temp_hum_pin):
@@ -39,10 +38,16 @@ class Sistema:
         
     def medir_temperatura_y_humedad(self):
         return self.temp_hum.med
-    
+
 led_pins = [4]
 ultrasonico_pins = [(23, 24), (5, 6), (12, 16)]
 temp_hum_pin = 18
 
 sistema = Sistema(led_pins, ultrasonico_pins, temp_hum_pin)
 sistema.configurar_sensores()
+
+distancia = sistema.medir_distancia(0)
+temp_hum = sistema.medir_temperatura_y_humedad()
+
+print(distancia)
+print(temp_hum)
